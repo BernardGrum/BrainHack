@@ -1,0 +1,31 @@
+﻿<Window x:Class="Hanoi.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Hanoi"
+        mc:Ignorable="d"
+        Title="Hanoi" Height="500.139" Width="861.351" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Canvas>
+        <Canvas.Background>
+            <ImageBrush ImageSource="Resources/hanoibg.jpg"/>
+        </Canvas.Background>
+        <Label x:Name="label_Time" Content="Label" Height="30" Canvas.Left="767" Width="78" Canvas.Top="10" FontSize="18" FontFamily="Comic Sans MS" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"/>
+        <Grid x:Name="grid_gamefield" Height="341" Canvas.Top="86" Width="676" Canvas.Left="85">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="85"/>
+                <RowDefinition Height="85"/>
+                <RowDefinition Height="86"/>
+                <RowDefinition Height="85"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="Auto" MinWidth="41"/>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="Auto" MinWidth="35"/>
+                <ColumnDefinition Width="200"/>
+            </Grid.ColumnDefinitions>
+        </Grid>
+
+    </Canvas>
+</Window>

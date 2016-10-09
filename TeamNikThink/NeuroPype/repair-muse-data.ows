@@ -1,0 +1,180 @@
+<?xml version='1.0' encoding='utf-8'?>
+<scheme description="" title="" version="2.0">
+	<nodes>
+		<node id="0" name="LSL Input" position="(200, 200)" project_name="Orange" qualified_name="Orange.widgets.network.owlslinput.OWLSLInput" title="LSL Input" version="" />
+		<node id="1" name="Override Timestamps" position="(300, 200)" project_name="Orange" qualified_name="Orange.widgets.utilities.owoverridetimestamps.OWOverrideTimestamps" title="Override Timestamps" version="" />
+		<node id="2" name="LSL Output" position="(400, 200)" project_name="Orange" qualified_name="Orange.widgets.network.owlsloutput.OWLSLOutput" title="LSL Output" version="" />
+	</nodes>
+	<links>
+		<link enabled="true" id="0" sink_channel="Data" sink_node_id="1" source_channel="Data" source_node_id="0" />
+		<link enabled="true" id="1" sink_channel="Data" sink_node_id="2" source_channel="Data" source_node_id="1" />
+	</links>
+	<annotations />
+	<thumbnail />
+	<node_properties>
+		<properties format="pickle" node_id="0">gAN9cQAoWAcAAAByZWNvdmVycQGIWBMAAABzYXZlZFdpZGdldEdlb21ldHJ5cQJjc2lwCl91bnBp
+Y2tsZV90eXBlCnEDWAwAAABQeVF0NC5RdENvcmVxBFgKAAAAUUJ5dGVBcnJheXEFQy4B2dDLAAEA
+AAAAAfMAAAC0AAADYgAAAgQAAAH3AAAAywAAA14AAAIAAAAAAAAAcQaFcQeHcQhScQlYCgAAAG1h
+eF9idWZsZW5xCkseWAwAAABub21pbmFsX3JhdGVxC05YFAAAAHJlc29sdmVfbWluaW11bV90aW1l
+cQxHP+AAAAAAAABYDQAAAGNoYW5uZWxfbmFtZXNxDV1xDlgFAAAAcXVlcnlxD1gLAAAAbmFtZT0n
+TXVzZSdxEFgMAAAAbWFya2VyX3F1ZXJ5cRFYAAAAAHESWAsAAABkaWFnbm9zdGljc3ETiVgMAAAA
+bWF4X2NodW5rbGVucRRLAFgMAAAAbWF4X2Jsb2NrbGVucRVNAAR1Lg==
+</properties>
+		<properties format="literal" node_id="1">{'timebase': 'wallclock', 'savedWidgetGeometry': None}</properties>
+		<properties format="pickle" node_id="2">gAN9cQAoWAwAAABtYXhfYnVmZmVyZWRxAUs8WAUAAABzcmF0ZXECTlgLAAAAbWFya2VyX25hbWVx
+A1gRAAAAT3V0U3RyZWFtLW1hcmtlcnNxBFgLAAAAc3RyZWFtX25hbWVxBVgJAAAATXVzZUZpeGVk
+cQZYEwAAAHNhdmVkV2lkZ2V0R2VvbWV0cnlxB2NzaXAKX3VucGlja2xlX3R5cGUKcQhYDAAAAFB5
+UXQ0LlF0Q29yZXEJWAoAAABRQnl0ZUFycmF5cQpDLgHZ0MsAAQAAAAAB8wAAAMAAAANiAAAB+AAA
+AfcAAADXAAADXgAAAfQAAAAAAABxC4VxDIdxDVJxDlgMAAAAb25seV9zaWduYWxzcQ+JWAsAAABz
+dHJlYW1fdHlwZXEQWAMAAABFRUdxEVgMAAAAc2VuZF9tYXJrZXJzcRKJWAkAAABjaHVua19sZW5x
+E0sAWAkAAABzb3VyY2VfaWRxFFgLAAAAO2lscmpnNDk4NTZxFXUu
+</properties>
+	</node_properties>
+	<patch>{
+    "edges": [
+        [
+            "node1",
+            "data",
+            "node2",
+            "data"
+        ],
+        [
+            "node2",
+            "data",
+            "node3",
+            "data"
+        ]
+    ],
+    "nodes": {
+        "node1": {
+            "class": "LSLInput",
+            "module": "neuropype.nodes.network",
+            "params": {
+                "channel_names": {
+                    "customized": true,
+                    "type": "Port",
+                    "value": [
+                        "TP9",
+                        "FP1",
+                        "FP2",
+                        "TP10",
+                        "n/a",
+                        "n/a"
+                    ]
+                },
+                "diagnostics": {
+                    "customized": false,
+                    "type": "BoolPort",
+                    "value": false
+                },
+                "marker_query": {
+                    "customized": false,
+                    "type": "StringPort",
+                    "value": ""
+                },
+                "max_blocklen": {
+                    "customized": false,
+                    "type": "IntPort",
+                    "value": 1024
+                },
+                "max_buflen": {
+                    "customized": false,
+                    "type": "IntPort",
+                    "value": 30
+                },
+                "max_chunklen": {
+                    "customized": false,
+                    "type": "IntPort",
+                    "value": 0
+                },
+                "nominal_rate": {
+                    "customized": true,
+                    "type": "Port",
+                    "value": 220.0
+                },
+                "query": {
+                    "customized": true,
+                    "type": "StringPort",
+                    "value": "name='Muse'"
+                },
+                "recover": {
+                    "customized": false,
+                    "type": "BoolPort",
+                    "value": true
+                },
+                "resolve_minimum_time": {
+                    "customized": false,
+                    "type": "FloatPort",
+                    "value": 0.5
+                }
+            },
+            "uuid": "34d59b4e-888c-4fd9-8465-f663062495ce"
+        },
+        "node2": {
+            "class": "OverrideTimestamps",
+            "module": "neuropype.nodes.utilities",
+            "params": {
+                "timebase": {
+                    "customized": false,
+                    "type": "EnumPort",
+                    "value": "wallclock"
+                }
+            },
+            "uuid": "9ef12317-6c45-44fa-91a6-203652aba22f"
+        },
+        "node3": {
+            "class": "LSLOutput",
+            "module": "neuropype.nodes.network",
+            "params": {
+                "chunk_len": {
+                    "customized": false,
+                    "type": "IntPort",
+                    "value": 0
+                },
+                "marker_name": {
+                    "customized": false,
+                    "type": "StringPort",
+                    "value": "OutStream-markers"
+                },
+                "max_buffered": {
+                    "customized": false,
+                    "type": "IntPort",
+                    "value": 60
+                },
+                "only_signals": {
+                    "customized": false,
+                    "type": "BoolPort",
+                    "value": false
+                },
+                "send_markers": {
+                    "customized": false,
+                    "type": "BoolPort",
+                    "value": false
+                },
+                "source_id": {
+                    "customized": true,
+                    "type": "StringPort",
+                    "value": ";ilrjg49856"
+                },
+                "srate": {
+                    "customized": false,
+                    "type": "Port",
+                    "value": null
+                },
+                "stream_name": {
+                    "customized": true,
+                    "type": "StringPort",
+                    "value": "MuseFixed"
+                },
+                "stream_type": {
+                    "customized": true,
+                    "type": "StringPort",
+                    "value": "EEG"
+                }
+            },
+            "uuid": "42ac188b-2868-41ae-9989-beca2f774e3b"
+        }
+    },
+    "version": 1.1
+}</patch>
+</scheme>

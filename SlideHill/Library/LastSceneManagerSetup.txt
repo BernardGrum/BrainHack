@@ -1,0 +1,4 @@
+sceneSetups:
+- path: Assets/SlideHill.unity
+  isLoaded: 1
+  isActive: 1

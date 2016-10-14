@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/log"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="15dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="5dp"
+            android:text="..." />
+
+        <TextView
+            android:id="@+id/log2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/log"
+            android:paddingBottom="15dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="5dp"
+            android:text="Waiting for action!"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/setUpReporter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/log2"
+            android:text="SET UP REPORTER" />
+
+        <Button
+            android:id="@+id/enableData"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/queryReportControl"
+            android:text="Enable Data Stream" />
+
+        <Button
+            android:id="@+id/queryReportControl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/setUpReporter"
+            android:text="Query enabled reporters" />
+
+        <TextView
+            android:id="@+id/data_received"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/enableData"
+            android:paddingBottom="15dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="15dp" />
+
+        <LinearLayout
+            android:id="@+id/footer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/data_received"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/nukeData"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Delete all data" />
+
+            <Button
+                android:id="@+id/disconnect"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Unpair Device" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/reInitiateSms"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/footer"
+            android:layout_weight="1"
+            android:enabled="true"
+            android:text="Re-initiate SMS" />
+
+        <TextView
+            android:id="@+id/debug3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@id/reInitiateSms"
+            android:layout_marginTop="25dp"
+            android:text="..." />
+
+
+    </RelativeLayout>
+
+</ScrollView>
